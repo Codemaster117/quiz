@@ -1,0 +1,113 @@
+/* Background image and global styles */
+@font-face {
+  font-family: 'InterVar';
+  src: local('Inter'), local('Inter Regular');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+body.bg {
+  margin: 0;
+  min-height: 100vh;
+  background: #0ea5e9 url("{{ url_for('static', filename='bg.jpg') }}") no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0f172a;
+  font-family: InterVar, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+.container {
+  width: min(680px, 92vw);
+  padding: 28px;
+}
+
+.card {
+  background: rgba(255,255,255,0.92);
+  border-radius: 18px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  backdrop-filter: blur(6px);
+}
+
+h1, h2 {
+  margin: 0 0 10px;
+}
+
+.qtext {
+  color: #1d4ed8;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 1rem;
+  margin: 6px 0 10px;
+}
+
+.answers .option {
+  display: block;
+  background: #f1f5f9;
+  margin: 10px 0;
+  padding: 12px 14px;
+  border-radius: 12px;
+  transition: transform .12s ease, background .2s ease;
+  cursor: pointer;
+}
+
+.answers .option:hover {
+  transform: translateY(-1px);
+  background: #e2e8f0;
+}
+
+.btn {
+  appearance: none;
+  border: none;
+  background: linear-gradient(135deg, #3b82f6, #22c55e);
+  color: white;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform .12s ease, box-shadow .2s ease, opacity .2s ease;
+  box-shadow: 0 8px 20px rgba(59,130,246,.35);
+}
+
+.btn:hover { transform: translateY(-1px); }
+.btn:active { transform: translateY(0); opacity: .9; }
+
+.progress {
+  font-size: .95rem;
+  color: #475569;
+  margin-bottom: 8px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.table th, .table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #e2e8f0;
+  text-align: left;
+}
+
+.table th {
+  background: #1e293b;
+  color: white;
+}
+
+.table tr:last-child td { border-bottom: none; }
+
+.yours { color: #0f766e; }
+
+.fade { animation: fade-in .35s ease both; }
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}

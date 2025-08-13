@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Leaderboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="bg">
+  <div class="container card fade">
+    <h1>🏆 Leaderboard</h1>
+    <p class="yours">Your score, {{ name }}: <b>{{ score }}</b></p>
+    <table class="table">
+      <tr><th>Name</th><th>Score</th></tr>
+      {% for s in scores %}
+      <tr>
+        <td>{{ s.name }}</td>
+        <td>{{ s.score }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    <div class="actions">
+      <a class="btn" href="{{ url_for('index') }}">Play Again</a>
+    </div>
+  </div>
+</body>
+</html>
