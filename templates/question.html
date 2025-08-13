@@ -2,12 +2,12 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Question {{ index }} / {{ total }}</title>
+  <title>Pregunta {{ index }} / {{ total }}</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body class="bg">
   <div class="container card fade">
-    <div class="progress">Question {{ index }} of {{ total }}</div>
+    <div class="progress">Pregunta {{ index }} de {{ total }}</div>
     <h2 class="qtext">{{ question.question_text }}</h2>
 
     <form method="POST" class="answers">
@@ -23,7 +23,7 @@
         <textarea name="answer" placeholder="Type your answer..." class="input" rows="4"></textarea>
       {% endif %}
 
-      <button type="submit" class="btn">Submit & Next</button>
+      <button type="submit" class="btn">Siguiente Pregunta</button>
     </form>
   </div>
 </body>
