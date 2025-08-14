@@ -57,9 +57,11 @@ with app.app_context():
                      option_a="True", option_b="False",
                      correct_answer="B"),
             # OPEN (skipped in scoring)
-            Question(question_text="Name a programming paradigm you like and why.",
+            Question(question_text="Como se llama la cuenta de Instagram de Julieta y Nicole para mascotas perdidas?",
                      question_type="OPEN"),
-            Question(question_text="In a sentence, describe your perfect weekend.",
+            Question(question_text="Nombra a los amigos de Julieta.",
+                     question_type="OPEN"),
+            Question(question_text="Qué edad tiene Juli en la historia?",
                      question_type="OPEN"),
         ]
         db.session.add_all(demo)
